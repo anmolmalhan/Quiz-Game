@@ -48,3 +48,12 @@ function getResults(questionObj, computerChoice) {
     return `The computer's choice is wrong. The correct answer is: ${questionObj.answer}`;
   };
 };
+const selectedQuestion = getRandomQuestion(questions);
+const compGuess = getRandomComputerChoice(selectedQuestion.choices);
+const result = getResults(selectedQuestion, compGuess);
+
+console.log("Category:", selectedQuestion.category);
+console.log("Question:", selectedQuestion.question);
+console.log("Choices:", selectedQuestion.choices.join(", "));
+console.log("Computer Chose:", compGuess);
+console.log(result);
